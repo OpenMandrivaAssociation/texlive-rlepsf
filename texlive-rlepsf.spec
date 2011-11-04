@@ -50,6 +50,7 @@ facilities of the labelfig package in place of using
 %{_texmfdistdir}/tex/generic/rlepsf/rlepsf.tex
 %doc %{_texmfdistdir}/doc/generic/rlepsf/read.me
 %doc %{_texmfdistdir}/doc/generic/rlepsf/rlepsdoc.ps
+%doc %{_tlpkgobjdir}/*.tlpobj
 
 #-----------------------------------------------------------------------
 %prep
@@ -60,3 +61,5 @@ facilities of the labelfig package in place of using
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
+mkdir -p %{buildroot}%{_tlpkgobjdir}
+cp -fpa tlpkg/tlpobj/*.tlpobj %{buildroot}%{_tlpkgobjdir}
