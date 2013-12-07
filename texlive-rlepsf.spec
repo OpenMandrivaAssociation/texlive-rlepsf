@@ -6,7 +6,7 @@
 # catalog-version undef
 Name:		texlive-rlepsf
 Version:	20070113
-Release:	5
+Release:	6
 Summary:	Rewrite labels in EPS graphics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/rlepsf
