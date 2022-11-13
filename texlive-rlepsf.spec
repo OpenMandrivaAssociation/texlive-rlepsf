@@ -1,18 +1,12 @@
-# revision 19082
-# category Package
-# catalog-ctan /macros/generic/rlepsf
-# catalog-date 2007-01-13 23:45:25 +0100
-# catalog-license lppl
-# catalog-version undef
 Name:		texlive-rlepsf
-Version:	20190228
+Version:	19082
 Release:	1
 Summary:	Rewrite labels in EPS graphics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/rlepsf
 License:	LPPL
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rlepsf.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rlepsf.doc.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rlepsf.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rlepsf.doc.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -29,12 +23,12 @@ facilities of the labelfig package in place of using
 \extralabel.
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -44,24 +38,10 @@ facilities of the labelfig package in place of using
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1
+%autosetup -p1 -c -a1
 
 %build
 
 %install
 mkdir -p %{buildroot}%{_texmfdistdir}
 cp -fpar tex doc %{buildroot}%{_texmfdistdir}
-
-
-%changelog
-* Wed Jan 04 2012 Paulo Andrade <pcpa@mandriva.com.br> 20070113-2
-+ Revision: 755684
-- Rebuild to reduce used resources
-
-* Sat Nov 05 2011 Paulo Andrade <pcpa@mandriva.com.br> 20070113-1
-+ Revision: 719455
-- texlive-rlepsf
-- texlive-rlepsf
-- texlive-rlepsf
-- texlive-rlepsf
-
