@@ -1,6 +1,6 @@
 Name:		texlive-rlepsf
 Version:	19082
-Release:	1
+Release:	2
 Summary:	Rewrite labels in EPS graphics
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/generic/rlepsf
