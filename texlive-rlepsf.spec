@@ -3,7 +3,7 @@ Version:	19082
 Release:	2
 Summary:	Rewrite labels in EPS graphics
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/generic/rlepsf
+URL:		https://www.ctan.org/tex-archive/macros/generic/rlepsf
 License:	LPPL
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rlepsf.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/rlepsf.doc.r%{version}.tar.xz
